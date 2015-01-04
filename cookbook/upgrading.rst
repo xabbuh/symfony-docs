@@ -5,7 +5,7 @@ So a new Symfony release has come out and you want to upgrade, great! Fortunatel
 because Symfony protects backwards-compatibility very closely, this *should*
 be quite easy.
 
-There are two types of upgrades, and both are a little different:
+There are two types of upgrades and both are a little different:
 
 * :ref:`upgrading-patch-version`
 * :ref:`upgrading-minor-version`
@@ -36,7 +36,7 @@ this safely by running:
 
     $ composer update
 
-But beware. If you have some bad `version constraints`_ in your ``composer.json``,
+But beware. If you have some bad version constraints in your ``composer.json``,
 (e.g. ``dev-master``), then this could upgrade some non-Symfony libraries
 to new versions that contain backwards-compatibility breaking changes.
 
@@ -47,15 +47,15 @@ Upgrading a Minor Version (e.g. 2.5.3 to 2.6.1)
 
 If you're upgrading a minor version (where the middle number changes), then
 you should also *not* encounter significant backwards compatibility changes.
-For details, see our :doc:`/contributing/code/bc`.
+For details, see :doc:`/contributing/code/bc`.
 
 However, some backwards-compatibility breaks *are* possible, and you'll learn
 in a second how to prepare for them.
 
 There are two steps to upgrading:
 
-:ref:`upgrade-minor-symfony-composer`;
-:ref:`upgrade-minor-symfony-code`
+* :ref:`upgrade-minor-symfony-composer`
+* :ref:`upgrade-minor-symfony-code`
 
 .. _`upgrade-minor-symfony-composer`:
 
@@ -69,7 +69,6 @@ to use the new version:
 
     {
         "...": "...",
-
         "require": {
             "php": ">=5.3.3",
             "symfony/symfony": "2.6.*",
@@ -107,7 +106,7 @@ using might still work, but might now be deprecated. That's actually ok,
 but if you know about these deprecations, you can start to fix them over
 time.
 
-Every version of Symfony comes with an UPGRADE file that describes these
+Every version of Symfony comes with an `UPGRADE` file that describes these
 changes. Below are links to the file for each version, which you'll need
 to read to see if you need any code changes.
 

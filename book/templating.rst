@@ -867,6 +867,20 @@ configuration:
 
 .. configuration-block::
 
+    .. code-block:: php-annotations
+
+        // src/AppBundle/Controller/WelcomeController.php
+        class WelcomeController extends Controller
+        {
+            /**
+             * @Route("/", name="_welcome")
+             */
+            public function indexAction()
+            {
+                // ...
+            }
+        }
+
     .. code-block:: yaml
 
         # app/config/routing.yml
